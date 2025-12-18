@@ -11,13 +11,15 @@
 #include "tests/lib.h"
 #include "tests/filesys/base/syn-read.h"
 
-const char *test_name = "child-syn-read";
+extern char *test_name;
 
 static char buf[BUF_SIZE];
 
 int
 main (int argc, const char *argv[]) 
 {
+  test_name = "child-syn-read";
+
   int child_idx;
   int fd;
   size_t i;
